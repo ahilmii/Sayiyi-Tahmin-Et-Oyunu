@@ -1,0 +1,73 @@
+<!doctype HTML>
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4 Basamaklı Sayıyı Tahmin Et </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="firststyle.css"> 
+    
+</head>
+
+
+<body>
+
+<div class="container">
+    <div id="game">
+        <h2>Sayıyı Tahmin Et</h2>
+        
+        <div class="input-wrapper">
+            <input type="number" placeholder="00" id="guess" />
+            <button class="buton" id="check-btn" onclick="addTask()">
+             Tahmin Et
+            </button>
+       
+        </div>
+    
+            <span><span id="no-of-guesses">0</span></span>
+            <p id="guessed-nums">Tahminleriniz:
+
+                <ul id="list-container">
+
+                </ul>
+
+            </p>
+
+            <button type="button" onclick="openPopup()" style="cursor: pointer;" class="icon"><span><i class="fa-solid fa-question fa-flip" style="color: #d10823;"></i></span></button>
+
+            <div class="popup" id="popup">
+                <img src="questionmark.jpeg">
+                <h2>Nasıl Oynanır?</h2>
+                <p>Rakamları <strong>farklı 4 basamaklı <br>bir sayıyı</strong>  tahmin etmeye çalışacaksınız. <br>Bilgisayarın ürettiği sayı <strong>1234</strong> olsun.<br> Sizin tahmininiz <strong>2345</strong> olsun.<br> 2 ve 3 ilk sayıda var fakat yerleri doğru <br>değil. Dolayısıyla buradan -2 sonucu gelir.
+                <br> 4 sayısı hem ilk sayıda var hem de yeri<br>doğru. Dolayısıyla 1 sonucu gelir</p>
+                <button type="button" onclick="closePopup()">Tamam</button>
+            </div>  
+        
+
+    </div>
+
+    <button id="restart" class="buton">Tekrar Oyna</button>
+    <div class="result">
+        <div id="hint"></div>
+    </div>        
+
+</div>
+
+<script>
+    let popup = document.getElementById("popup");
+    
+    function openPopup() {
+        popup.classList.add("open-popup")
+    }
+    
+    function closePopup() {
+        popup.classList.remove("open-popup")
+    }
+    
+    </script>
+
+    
+<script src="lastversion.js"></script>    
+</body>
+
+</html>
